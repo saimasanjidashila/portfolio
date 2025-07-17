@@ -30,67 +30,38 @@
     text-align: center;
     padding: 3rem 1rem 2rem;
   }
-  header h1 {
+header h1 {
     font-size: 2rem;
     font-family:'Orbitron';
     color: #ffffff;
     margin-bottom: 0.5rem;
-  }
-  header p {
+}
+header p {
     font-size: 1.2rem;
     color: #aaaaaa;
     font-family:'Orbitron';
     margin-bottom: 1.5rem;
-  }
-  #skills {
-  padding: 60px 20px;
-  background-color: rgba(0, 0, 0, 0.6); /* dark transparent background */
-  color: #ffffff;
-  text-align: center;
-  border-radius: 10px;
-  margin: 50px auto;
-  max-width: 1000px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
-  }
+}
 
-#skills h2 {
-  font-size: 2.5em;
-  margin-bottom: 30px;
-  color: #00bcd4;
-  }
 
 .skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
 
-.skill-column {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  padding: 20px 30px;
-  width: 250px;
-  color: #ffffff;
-  }
+.skill-category h3 {
+  margin-bottom: 0.5rem;
+  color: transparent;
+}
 
-.skill-column h3 {
-  font-size: 1.4em;
-  margin-bottom: 10px;
-  color: #00bcd4;
-  }
-
-.skill-column ul {
-  list-style-type: none;
-  padding: 0;
-  }
-
-.skill-column li {
-  font-size: 1em;
-  margin-bottom: 8px;
-  color: #e0e0e0;
-  }
+.skill-category ul li {
+  background: #e4e4e4;
+  margin: 5px 0;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: 500;
+}
 
   .social-links a:hover {
     color: rgb(71, 123, 198);
@@ -108,7 +79,12 @@
     color: rgb(16, 82, 99);
     transform: scale(1.2);
   }
-  
+  .section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
   nav {
     margin-top: 1rem;
     font-family:'Orbitron';
@@ -154,36 +130,69 @@
     box-shadow: 0 0 12px rgba(0, 191, 255, 0.1);
     transition: transform 0.3s ease;
   }
-#skills {
-  padding: 2rem;
-  background-color: #f9f9f9;
-}
-
 .skills-container {
   display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 1.5rem 2rem;
+  justify-items: center;
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+#skills {
+  padding-top: 0;       /* remove extra vertical space */
+  margin-top: 0;        /* remove gap from the section above */
+  padding-bottom: 3rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.skill-column {
+  background-color: rgba(5, 2, 2, 0.4);
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+
+  box-shadow: 0 0 12px rgba(0, 191, 255, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.skill-category h3 {
+.skill-column:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 15px rgba(121, 143, 150, 0.2);
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+.typing-effect {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 2s steps(20, end) forwards;
+}
+
+.skill-column h3 {
+  font-family: 'Orbitron';
+  color: #ffffff;
+  font-size: 1.3rem;
   margin-bottom: 0.5rem;
-  color: #333;
 }
 
-.skill-category ul {
-  list-style: none;
-  padding: 0;
-}
 
-.skill-category ul li {
-  background: #e4e4e4;
-  margin: 5px 0;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-weight: 500;
-}
-
+.skill-column li {
   
+  font-size: 0.95rem;
+  color: #cccccc;
+  margin-bottom: 6px;
+}
+
+
   .edu-card:hover {
     transform: translateY(-4px);
   }
@@ -229,7 +238,7 @@
   
 
   .project-content {
-    font-size: 0.3rem;
+    font-size: 0.9rem;
     display: flex;
     align-items: flex-start;
     gap: 1rem;
