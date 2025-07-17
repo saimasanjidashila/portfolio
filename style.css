@@ -42,51 +42,55 @@
     font-family:'Orbitron';
     margin-bottom: 1.5rem;
   }
-  
   #skills {
   padding: 60px 20px;
-  background-color: #f0f0f0;
+  background-color: rgba(0, 0, 0, 0.6); /* dark transparent background */
+  color: #ffffff;
   text-align: center;
-}
+  border-radius: 10px;
+  margin: 50px auto;
+  max-width: 1000px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  }
 
 #skills h2 {
   font-size: 2.5em;
-  margin-bottom: 40px;
-}
+  margin-bottom: 30px;
+  color: #00bcd4;
+  }
 
 .skills-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
-}
+  }
 
 .skill-column {
-  background: #ffffff;
-  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
   padding: 20px 30px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.05);
-  min-width: 250px;
-  max-width: 300px;
-}
+  width: 250px;
+  color: #ffffff;
+  }
 
 .skill-column h3 {
   font-size: 1.4em;
-  margin-bottom: 15px;
-  color: #333;
-}
+  margin-bottom: 10px;
+  color: #00bcd4;
+  }
 
 .skill-column ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
-  margin: 0;
-}
+  }
 
 .skill-column li {
   font-size: 1em;
-  color: #555;
   margin-bottom: 8px;
-}
+  color: #e0e0e0;
+  }
 
   .social-links a:hover {
     color: rgb(71, 123, 198);
